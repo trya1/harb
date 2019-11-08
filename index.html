@@ -1,0 +1,87 @@
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<h1>Tic-tac-toe</h1>  
+	<style>
+		h1{position: absolute; top: -20; left: 690;}
+		.p1{position:absolute; top: 300; left: 150; font-size:200%;}
+		.p2{position:absolute; top: 300; left: 1150; font-size:0%;}
+		.board{z-index: -1; position:absolute; top: 50; left: 470;}
+		.verticalRight{position:absolute; top: 75; left: 860;}
+		.verticalLeft{position:absolute; top: 75; left: 660;}
+		.horizontalTop{position:absolute; top: 225; left: 490;}
+		.horizontalBottom{position:absolute; top: 425; left: 490;}
+		.square1{z-index: 1; position:absolute; top: 75; left: 490;}
+		.square2{z-index: 1; position:absolute; top: 245; left: 490;}
+		.square3{z-index: 1; position:absolute; top: 445; left: 490;}
+		.square4{z-index: 1; position:absolute; top: 75; left: 680;}
+		.square5{z-index: 1; position:absolute; top: 245; left: 680;}
+		.square6{z-index: 1; position:absolute; top: 445; left: 680;}
+		.square7{z-index: 1; position:absolute; top: 75; left: 880;}
+		.square8{z-index: 1; position:absolute; top: 245; left: 880;}
+		.square9{z-index: 1; position:absolute; top: 445; left: 880;}
+		.x1{z-index: 0; position:absolute; top: 75; left: 490;}
+		.x2{z-index: 0; position:absolute; top: 245; left: 490;}
+		.x3{z-index: 0; position:absolute; top: 445; left: 490;}
+		.x4{z-index: 0; position:absolute; top: 75; left: 680;}
+		.x5{z-index: 0; position:absolute; top: 245; left: 680;}
+		.x6{z-index: 0; position:absolute; top: 445; left: 680;}
+		.x7{z-index: 0; position:absolute; top: 75; left: 880;}
+		.x8{z-index: 0; position:absolute; top: 245; left: 880;}
+		.x9{z-index: 0; position:absolute; top: 445; left: 880;}
+		.o1{z-index: 0; position:absolute; top: 75; left: 490;}
+		.o2{z-index: 0; position:absolute; top: 245; left: 490;}
+		.o3{z-index: 0; position:absolute; top: 445; left: 490;}
+		.o4{z-index: 0; position:absolute; top: 75; left: 680;}
+		.o5{z-index: 0; position:absolute; top: 245; left: 680;}
+		.o6{z-index: 0; position:absolute; top: 445; left: 680;}
+		.o7{z-index: 0; position:absolute; top: 75; left: 880;}
+		.o8{z-index: 0; position:absolute; top: 245; left: 880;}
+		.o9{z-index: 0; position:absolute; top: 445; left: 880;}
+	</style>
+  </head>
+  <body>
+    <img class="board" id = "board" src = "board.png" height="600" width="600">
+
+    <img class="verticalRight" id = "verticalRight" src = "line.png" height="560" width="20">
+    <img class="verticalLeft" id = "verticalLeft" src = "line.png" height="560" width="20">
+    
+    <img class="horizontalTop" id = "horizontalTop" src = "line.png" height="20" width="560">
+    <img class="horizontalBottom" id = "horizontalBottom" src = "line.png" height="20" width="560">
+
+    <img class="square1" id = "square1" src = "background.png" height="150" width="170">
+    <img class="square2" id = "square2" src = "background.png" height="180" width="170">
+    <img class="square3" id = "square3" src = "background.png" height="190" width="170">
+    <img class="square4" id = "square4" src = "background.png" height="150" width="180">
+    <img class="square5" id = "square5" src = "background.png" height="180" width="180">
+    <img class="square6" id = "square6" src = "background.png" height="190" width="180">
+    <img class="square7" id = "square7" src = "background.png" height="150" width="170">
+    <img class="square8" id = "square8" src = "background.png" height="180" width="170">
+    <img class="square9" id = "square9" src = "background.png" height="190" width="170">
+
+    <img class="x1" id = "x1" src = "x.png" height="150" width="170">
+    <img class="x2" id = "x2" src = "x.png" height="180" width="170">
+    <img class="x3" id = "x3" src = "x.png" height="190" width="170">
+    <img class="x4" id = "x4" src = "x.png" height="150" width="180">
+    <img class="x5" id = "x5" src = "x.png" height="180" width="180">
+    <img class="x6" id = "x6" src = "x.png" height="190" width="180">
+    <img class="x7" id = "x7" src = "x.png" height="150" width="170">
+    <img class="x8" id = "x8" src = "x.png" height="180" width="170">
+    <img class="x9" id = "x9" src = "x.png" height="190" width="170">
+
+    <img class="o1" id = "o1" src = "o.png" height="150" width="170">	
+    <img class="o2" id = "o2" src = "o.png" height="180" width="170">	
+    <img class="o3" id = "o3" src = "o.png" height="190" width="170">	
+    <img class="o4" id = "o4" src = "o.png" height="150" width="180">	
+    <img class="o5" id = "o5" src = "o.png" height="180" width="180">	
+    <img class="o6" id = "o6" src = "o.png" height="190" width="180">	
+    <img class="o7" id = "o7" src = "o.png" height="150" width="170">	
+    <img class="o8" id = "o8" src = "o.png" height="180" width="170">	
+    <img class="o9" id = "o9" src = "o.png" height="190" width="170">	
+    	
+    <span class="p1" id="p1">Player 1's turn (X)</span>
+    <span class="p2" id="p2">Player 2's turn (O)</span>
+  
+    <script src="project1.js"></script>
+  </body>
+</html>
